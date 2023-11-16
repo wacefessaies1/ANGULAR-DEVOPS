@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  url:'http://localhost:8089/api/piste'
+  url:'http://192.168.81.128:8089/api/piste'
 };
 
 /*
