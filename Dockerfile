@@ -6,6 +6,6 @@ COPY . .
 RUN npm install --force
 RUN npm run build --prod
 FROM nginx:latest AS ngi
-COPY --from=build /dist/src/app/dist/crudtuto-Front /usr/share/nginx/html
+COPY --from=build /dist/src/app/dist/devops-angular /usr/share/nginx/html
 COPY default.conf /etc/nginx/conf.d
 EXPOSE 80
