@@ -7,6 +7,6 @@ RUN npm install --force
 RUN npm run build --prod
 FROM nginx:latest AS ngi
 COPY --from=build /dist/src/app/dist/devops-angular /usr/share/nginx/html
-COPY nginx.conf /etc/nginx/conf.d
+COPY nginx.conf /etc/nginx/conf.d/
 EXPOSE 4200
 CMD ["nginx", "-g", "daemon off;"]
